@@ -12,4 +12,5 @@ TBD
 
 # Implemented adapters:
 
-TBD
+- Kingfisher
+- ...
