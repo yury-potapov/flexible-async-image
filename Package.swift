@@ -19,9 +19,18 @@ let package = Package(
             targets: ["FlexibleAsyncImageKingfisherAdapter"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "8.0.3")),
+    ],
     targets: [
         .target(name: "FlexibleAsyncImage"),
-        .target(name: "FlexibleAsyncImageKingfisherAdapter"),
+        .target(
+            name: "FlexibleAsyncImageKingfisherAdapter",
+            dependencies: [
+                "FlexibleAsyncImage",
+                .product(name: "Kingfisher", package: "Kingfisher")
+            ]
+        ),
         .target(name: "FlexibleAsyncImageFileManagerAdapter"),
         .target(name: "FlexibleAsyncImageAVFoundationAdapter")
     ]
