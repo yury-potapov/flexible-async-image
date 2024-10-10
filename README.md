@@ -12,5 +12,5 @@ TBD
 
 # Implemented adapters:
 
-- Kingfisher
+- Kingfisher https://github.com/onevcat/Kingfisher
 - ...
